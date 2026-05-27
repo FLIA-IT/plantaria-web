@@ -14,19 +14,17 @@ export function About() {
       </div>
 
       <div className="mx-auto grid max-w-5xl items-start gap-10 md:grid-cols-[5fr_7fr] md:gap-16">
-        {/* Portrait placeholder — botanical atmosphere */}
+        {/* Portrait placeholder — botanical atmosphere; TODO: replace with real portrait */}
         <div
           className="botanical-placeholder aspect-[3/4] w-full rounded-3xl"
           aria-hidden="true"
-          role="img"
-          aria-label="Foto de la consultora (próximamente)"
         >
           {/* Soft inner leaf-vein accent */}
           <div
             className="h-full w-full rounded-3xl"
             style={{
               background: `
-                linear-gradient(135deg, transparent 40%, rgba(124,140,106,0.08) 100%)
+                linear-gradient(135deg, transparent 40%, var(--color-sage-muted) 100%)
               `,
             }}
           />

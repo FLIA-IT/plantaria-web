@@ -10,7 +10,7 @@ export function Footer() {
         {/* Hairline top rule */}
         <div
           className="mb-10 h-px w-full"
-          style={{ background: 'rgba(234,230,221,0.12)' }}
+          style={{ background: 'var(--color-cream-rule)' }}
           aria-hidden="true"
         />
 

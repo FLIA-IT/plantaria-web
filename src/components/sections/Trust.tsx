@@ -18,7 +18,7 @@ export function Trust() {
         <div className="space-y-8">
           {site.trust.map((item, i) => (
             <figure
-              key={i}
+              key={`${item.author}-${i}`}
               className={[
                 'group relative border-l-2 border-sage/40 pl-7 transition-colors duration-300',
                 'hover:border-sage',

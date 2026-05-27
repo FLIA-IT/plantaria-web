@@ -11,7 +11,12 @@ export default function App() {
     <>
       <Navbar />
       <main>
-        <Hero /><About /><Services /><Products /><Trust /><FinalCta />
+        <Hero />
+        <About />
+        <Services />
+        <Products />
+        <Trust />
+        <FinalCta />
       </main>
       <Footer />
     </>

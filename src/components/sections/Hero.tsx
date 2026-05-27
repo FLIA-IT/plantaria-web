@@ -14,8 +14,8 @@ export function Hero() {
         aria-hidden="true"
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 110% 20%, rgba(74,74,71,0.18) 0%, transparent 60%),
-            radial-gradient(ellipse 50% 70% at -10% 80%, rgba(234,230,221,0.08) 0%, transparent 50%)
+            radial-gradient(ellipse 80% 60% at 110% 20%, var(--color-charcoal-dim) 0%, transparent 60%),
+            radial-gradient(ellipse 50% 70% at -10% 80%, var(--color-cream-muted) 0%, transparent 50%)
           `,
         }}
       />
@@ -76,7 +76,7 @@ export function Hero() {
         <div
           className="pointer-events-none absolute bottom-0 right-8 hidden h-32 w-px md:block"
           aria-hidden="true"
-          style={{ background: 'linear-gradient(to bottom, transparent, rgba(234,230,221,0.4))' }}
+          style={{ background: 'linear-gradient(to bottom, transparent, var(--color-cream-accent))' }}
         />
       </div>
     </section>

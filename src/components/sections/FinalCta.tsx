@@ -17,8 +17,8 @@ export function FinalCta() {
         aria-hidden="true"
         style={{
           background: `
-            radial-gradient(ellipse 70% 50% at 90% 10%, rgba(124,140,106,0.12) 0%, transparent 60%),
-            radial-gradient(ellipse 40% 60% at 10% 90%, rgba(181,156,143,0.08) 0%, transparent 50%)
+            radial-gradient(ellipse 70% 50% at 90% 10%, var(--color-sage-muted) 0%, transparent 60%),
+            radial-gradient(ellipse 40% 60% at 10% 90%, var(--color-mauve-muted-sm) 0%, transparent 50%)
           `,
         }}
       />
@@ -27,7 +27,7 @@ export function FinalCta() {
       <div
         className="pointer-events-none absolute left-0 right-0 top-0 h-px"
         aria-hidden="true"
-        style={{ background: 'rgba(234,230,221,0.15)' }}
+        style={{ background: 'var(--color-cream-rule-md)' }}
       />
 
       <div className="relative mx-auto max-w-2xl">

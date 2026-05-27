@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { site } from '../../content/site'
 
 interface MobileMenuProps {
@@ -5,9 +6,73 @@ interface MobileMenuProps {
   onClose: () => void
 }
 
+const FOCUSABLE_SELECTORS = [
+  'a[href]',
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',')
+
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
+  const closeRef = useRef<HTMLButtonElement>(null)
+  const navRef = useRef<HTMLElement>(null)
+  const previousFocusRef = useRef<HTMLElement | null>(null)
+
+  // Save previously focused element and move focus into menu when it opens
+  useEffect(() => {
+    if (open) {
+      previousFocusRef.current = document.activeElement as HTMLElement
+      closeRef.current?.focus()
+    } else {
+      previousFocusRef.current?.focus()
+      previousFocusRef.current = null
+    }
+  }, [open])
+
+  // Close on Escape + focus trap
+  useEffect(() => {
+    if (!open) return
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        onClose()
+        return
+      }
+
+      if (e.key !== 'Tab') return
+
+      const nav = navRef.current
+      if (!nav) return
+
+      const focusable = Array.from(nav.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS))
+      if (focusable.length === 0) return
+
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [open, onClose])
+
   return (
     <nav
+      ref={navRef}
       aria-label="Menú mobile"
       aria-hidden={!open}
       className={[
@@ -22,6 +87,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
       {/* Close button */}
       <div className="flex justify-end">
         <button
+          ref={closeRef}
           onClick={onClose}
           aria-label="Cerrar menú"
           className="rounded-full p-2 text-charcoal transition-colors duration-200 hover:bg-cream-deep active:bg-cream-deep/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage"
