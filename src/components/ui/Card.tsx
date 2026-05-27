@@ -8,7 +8,11 @@ export function Card({ children, className = '' }: CardProps) {
     <div
       className={[
         'rounded-2xl bg-cream-deep p-6',
-        'transition-shadow duration-300 hover:shadow-md',
+        'border border-transparent',
+        'transition-[transform,border-color,box-shadow]',
+        'duration-[var(--dur-short)]',
+        '[transition-timing-function:var(--ease-out)]',
+        'hover:-translate-y-0.5 hover:border-[rgba(124,140,106,0.2)] hover:shadow-sm',
         className,
       ].join(' ')}
     >

@@ -3,8 +3,82 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Base ──────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
 body {
+  overflow-x: clip;
   background-color: var(--color-cream);
   color: var(--color-charcoal);
   font-family: theme('fontFamily.sans');
+}
+
+/* Prevent sticky nav from covering anchor targets */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* ── Page reveal (one orchestrated entrance) ───────────────── */
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: reveal var(--dur-long) var(--ease-out) forwards;
+  animation-delay: calc(var(--reveal-i, 0) * 80ms);
+}
+
+/* ── Reduced motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 150ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 150ms !important;
+  }
+
+  .reveal {
+    animation-delay: 0ms !important;
+    opacity: 0;
+    transform: none;
+    animation: reveal-reduced 150ms linear forwards;
+  }
+
+  @keyframes reveal-reduced {
+    to { opacity: 1; }
+  }
+}
+
+/* ── Hairline rule utility ─────────────────────────────────── */
+.hairline {
+  border-top: 1px solid var(--color-charcoal-rule);
+}
+
+/* ── Botanical texture on placeholders ─────────────────────── */
+.botanical-placeholder {
+  background-color: var(--color-mauve-muted);
+  background-image:
+    radial-gradient(ellipse 60% 40% at 30% 50%, var(--color-sage-muted) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 75% 30%, rgba(181, 156, 143, 0.1) 0%, transparent 60%);
+  position: relative;
+  overflow: hidden;
+}
+
+.botanical-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle 2px at 20% 25%, var(--color-sage-border) 100%, transparent 100%),
+    radial-gradient(circle 1px at 60% 70%, var(--color-sage-border) 100%, transparent 100%),
+    radial-gradient(circle 1px at 80% 15%, rgba(181,156,143,0.3) 100%, transparent 100%),
+    radial-gradient(circle 2px at 40% 85%, rgba(181,156,143,0.2) 100%, transparent 100%);
+  pointer-events: none;
 }

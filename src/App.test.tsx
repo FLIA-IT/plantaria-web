@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import App from './App'
-
-test('renderiza la marca Plantaria', () => {
+import { site } from './content/site'
+test('renderiza el hero y el footer', () => {
   render(<App />)
-  expect(screen.getByText(/plantaria/i)).toBeInTheDocument()
+  expect(screen.getByRole('heading', { name: site.hero.title })).toBeInTheDocument()
+  expect(screen.getByText(/instagram @plantaria.sv/i)).toBeInTheDocument()
 })

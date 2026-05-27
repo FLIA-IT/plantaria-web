@@ -5,30 +5,56 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer id="contacto" className="bg-charcoal px-6 py-16 text-cream">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 text-center">
-        <p className="font-serif text-2xl italic tracking-wide">Plantaria</p>
+    <footer id="contacto" className="bg-charcoal px-6 pt-12 pb-10 text-cream">
+      <div className="mx-auto max-w-6xl">
+        {/* Hairline top rule */}
+        <div
+          className="mb-10 h-px w-full"
+          style={{ background: 'rgba(234,230,221,0.12)' }}
+          aria-hidden="true"
+        />
 
-        <nav aria-label="Redes y contacto" className="flex flex-wrap justify-center gap-6">
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-sans text-sm text-cream/80 underline-offset-4 transition-colors hover:text-cream hover:underline focus-visible:outline-none focus-visible:underline"
-          >
-            Instagram @plantaria.sv
-          </a>
-          <a
-            href={buildWhatsappUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-sans text-sm text-cream/80 underline-offset-4 transition-colors hover:text-cream hover:underline focus-visible:outline-none focus-visible:underline"
-          >
-            WhatsApp
-          </a>
-        </nav>
+        {/* Letter-close layout — brand left, links right */}
+        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          {/* Brand */}
+          <div>
+            <p className="font-serif text-xl italic tracking-wide text-cream">Plantaria</p>
+            <p
+              className="mt-2 font-sans text-cream/40"
+              style={{ fontSize: 'var(--text-xs)' }}
+            >
+              Jardinería con propósito
+            </p>
+          </div>
 
-        <p className="font-sans text-xs text-cream/40">
+          {/* Links */}
+          <nav aria-label="Redes y contacto" className="flex flex-wrap items-center gap-6">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-cream/60 underline-offset-4 transition-colors duration-200 hover:text-cream hover:underline focus-visible:outline-none focus-visible:underline"
+              style={{ fontSize: 'var(--text-sm)', minHeight: '44px', display: 'inline-flex', alignItems: 'center' }}
+            >
+              Instagram @plantaria.sv
+            </a>
+            <a
+              href={buildWhatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-cream/60 underline-offset-4 transition-colors duration-200 hover:text-cream hover:underline focus-visible:outline-none focus-visible:underline"
+              style={{ fontSize: 'var(--text-sm)', minHeight: '44px', display: 'inline-flex', alignItems: 'center' }}
+            >
+              WhatsApp
+            </a>
+          </nav>
+        </div>
+
+        {/* Copyright — small, separated */}
+        <p
+          className="mt-10 font-sans text-cream/25"
+          style={{ fontSize: 'var(--text-xs)' }}
+        >
           © {year} Plantaria
         </p>
       </div>

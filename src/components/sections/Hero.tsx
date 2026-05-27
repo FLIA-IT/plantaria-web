@@ -5,36 +5,79 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="flex min-h-[90svh] flex-col items-center justify-center bg-sage px-6 text-center text-cream"
+      className="relative flex min-h-[85svh] flex-col justify-end overflow-hidden bg-sage"
       style={{ paddingBlock: 'var(--space-section)' }}
     >
-      <div className="mx-auto max-w-3xl">
-        {site.hero.eyebrow && (
-          <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-cream/70">
-            {site.hero.eyebrow}
-          </p>
-        )}
+      {/* Atmospheric botanical layer — CSS-only, no lib */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background: `
+            radial-gradient(ellipse 80% 60% at 110% 20%, rgba(74,74,71,0.18) 0%, transparent 60%),
+            radial-gradient(ellipse 50% 70% at -10% 80%, rgba(234,230,221,0.08) 0%, transparent 50%)
+          `,
+        }}
+      />
+      {/* Hairline rule accent */}
+      <div
+        className="pointer-events-none absolute left-0 right-0 top-0 h-px opacity-30"
+        aria-hidden="true"
+        style={{ background: 'var(--color-cream)' }}
+      />
 
-        <h1
-          className="font-serif font-normal leading-[1.1] text-cream"
-          style={{ fontSize: 'var(--text-hero)' }}
-        >
-          {site.hero.title}
-        </h1>
+      {/* Content — left-biased, not centred */}
+      <div className="relative mx-auto w-full max-w-6xl px-6">
+        <div className="max-w-2xl" style={{ '--reveal-i': 0 } as React.CSSProperties}>
+          {site.hero.eyebrow && (
+            <p
+              className="reveal mb-5 font-sans font-semibold uppercase tracking-[0.2em] text-cream/60"
+              style={{ fontSize: 'var(--text-xs)', '--reveal-i': 0 } as React.CSSProperties}
+            >
+              {site.hero.eyebrow}
+            </p>
+          )}
 
-        <p className="mx-auto mt-6 max-w-xl font-sans leading-relaxed text-cream/80"
-           style={{ fontSize: 'var(--text-base)' }}>
-          {site.hero.subtitle}
-        </p>
-
-        <div className="mt-10">
-          <WhatsappButton
-            message={site.hero.whatsappMessage}
-            className="bg-cream !text-charcoal hover:bg-cream-deep hover:!text-charcoal"
+          <h1
+            className="reveal font-serif font-normal leading-[1.05] text-cream"
+            style={{
+              fontSize: 'var(--text-hero)',
+              '--reveal-i': 1,
+            } as React.CSSProperties}
           >
-            {site.hero.cta}
-          </WhatsappButton>
+            {site.hero.title}
+          </h1>
+
+          <p
+            className="reveal mt-6 font-sans leading-relaxed text-cream/75"
+            style={{
+              fontSize: 'var(--text-base)',
+              maxWidth: '46ch',
+              '--reveal-i': 2,
+            } as React.CSSProperties}
+          >
+            {site.hero.subtitle}
+          </p>
+
+          <div
+            className="reveal mt-10"
+            style={{ '--reveal-i': 3 } as React.CSSProperties}
+          >
+            <WhatsappButton
+              message={site.hero.whatsappMessage}
+              className="bg-cream !text-charcoal hover:bg-cream-deep hover:!text-charcoal active:translate-y-px"
+            >
+              {site.hero.cta}
+            </WhatsappButton>
+          </div>
         </div>
+
+        {/* Decorative vertical rule — botanical accent */}
+        <div
+          className="pointer-events-none absolute bottom-0 right-8 hidden h-32 w-px md:block"
+          aria-hidden="true"
+          style={{ background: 'linear-gradient(to bottom, transparent, rgba(234,230,221,0.4))' }}
+        />
       </div>
     </section>
   )

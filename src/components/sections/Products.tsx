@@ -1,5 +1,4 @@
 import { site } from '../../content/site'
-import { Card } from '../ui/Card'
 import { SectionHeading } from '../ui/SectionHeading'
 
 export function Products() {
@@ -10,29 +9,39 @@ export function Products() {
       style={{ paddingBlock: 'var(--space-section)' }}
     >
       <div className="mx-auto max-w-5xl">
-        <SectionHeading eyebrow="Productos" title="Lo que distribuyo" className="text-center" />
+        <SectionHeading title="Lo que distribuyo" />
 
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-          {site.products.map((product) => (
-            <Card key={product.name} className="flex flex-col gap-4">
-              {/* Placeholder image */}
+        <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
+          {site.products.map((product, i) => (
+            <article
+              key={product.name}
+              className="group flex flex-col gap-4"
+            >
+              {/* Image slot — botanical atmosphere */}
               <div
-                className="aspect-square w-full rounded-xl bg-mauve/20"
+                className="botanical-placeholder aspect-[3/4] w-full overflow-hidden rounded-2xl transition-transform duration-300 group-hover:-translate-y-1"
                 aria-hidden="true"
-              >
-                {/* TODO: reemplazar por imagen real del producto */}
-              </div>
+                style={{
+                  /* Each placeholder slightly different tint */
+                  opacity: 0.8 + i * 0.05,
+                }}
+              />
 
-              <div>
-                <p className="font-serif italic text-charcoal"
-                   style={{ fontSize: 'calc(var(--text-base) * 1.1)' }}>
+              <div className="px-1">
+                <p
+                  className="font-serif italic text-charcoal transition-colors duration-200 group-hover:text-sage"
+                  style={{ fontSize: 'var(--text-base)', lineHeight: '1.3' }}
+                >
                   {product.name}
                 </p>
-                <p className="mt-1 font-sans text-sm leading-snug text-charcoal/60">
+                <p
+                  className="mt-1 font-sans leading-snug text-charcoal/55"
+                  style={{ fontSize: 'var(--text-xs)' }}
+                >
                   {product.description}
                 </p>
               </div>
-            </Card>
+            </article>
           ))}
         </div>
       </div>
