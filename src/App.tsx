@@ -5,6 +5,7 @@ import { About } from './components/sections/About'
 import { Services } from './components/sections/Services'
 import { Products } from './components/sections/Products'
 import { Trust } from './components/sections/Trust'
+import { Faq } from './components/sections/Faq'
 import { FinalCta } from './components/sections/FinalCta'
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Services />
         <Products />
         <Trust />
+        <Faq />
         <FinalCta />
       </main>
       <Footer />
