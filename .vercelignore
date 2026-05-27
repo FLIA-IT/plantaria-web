@@ -1,0 +1,9 @@
+node_modules
+dist
+test-results
+playwright-report
+.hallmark
+docs
+tests
+*.test.ts
+*.test.tsx
