@@ -1,0 +1,13 @@
+:root {
+  --color-cream: #EAE6DD;
+  --color-cream-deep: #F3ECE2;
+  --color-mauve: #B59C8F;
+  --color-sage: #7C8C6A;
+  --color-charcoal: #4A4A47;
+  --text-hero: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  --text-h2: clamp(1.75rem, 1.2rem + 2vw, 3rem);
+  --text-base: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  --space-section: clamp(4rem, 3rem + 5vw, 8rem);
+  --duration-normal: 300ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
