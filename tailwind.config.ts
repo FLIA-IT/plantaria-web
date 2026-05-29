@@ -10,6 +10,10 @@ export default {
         mauve: 'var(--color-mauve)',
         sage: 'var(--color-sage)',
         charcoal: 'var(--color-charcoal)',
+        olive: 'var(--color-olive)',
+        'olive-deep': 'var(--color-olive-deep)',
+        petal: 'var(--color-petal)',
+        'petal-soft': 'var(--color-petal-soft)',
       },
       fontFamily: {
         serif: ['Fraunces', 'Georgia', 'serif'],

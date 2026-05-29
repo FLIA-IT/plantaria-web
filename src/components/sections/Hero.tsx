@@ -65,7 +65,7 @@ export function Hero() {
           >
             <WhatsappButton
               message={site.hero.whatsappMessage}
-              className="bg-cream !text-charcoal hover:bg-cream-deep hover:!text-charcoal active:translate-y-px"
+              className="!bg-cream !text-charcoal hover:!bg-cream-deep hover:!text-charcoal active:translate-y-px"
             >
               {site.hero.cta}
             </WhatsappButton>
