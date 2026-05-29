@@ -6,9 +6,13 @@ import { Services } from './components/sections/Services'
 import { Products } from './components/sections/Products'
 import { Trust } from './components/sections/Trust'
 import { FinalCta } from './components/sections/FinalCta'
+import { PlantDecor } from './components/ui/PlantDecor'
+import { FloatingWhatsapp } from './components/ui/FloatingWhatsapp'
+import { site } from './content/site'
 export default function App() {
   return (
     <>
+      <PlantDecor />
       <Navbar />
       <main>
         <Hero />
@@ -19,6 +23,7 @@ export default function App() {
         <FinalCta />
       </main>
       <Footer />
+      <FloatingWhatsapp message={site.hero.whatsappMessage} />
     </>
   )
 }

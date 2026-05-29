@@ -7,11 +7,12 @@
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
+  background-color: var(--color-cream);
 }
 
 body {
   overflow-x: clip;
-  background-color: var(--color-cream);
+  background-color: transparent;
   color: var(--color-charcoal);
   font-family: theme('fontFamily.sans');
 }

@@ -5,6 +5,10 @@
   --color-mauve: #B59C8F;
   --color-sage: #7C8C6A;
   --color-charcoal: #4A4A47;
+  --color-olive: #545E3F;
+  --color-olive-deep: #3F4830;
+  --color-petal: #D9C7B8;
+  --color-petal-soft: #E8D9CB;
 
   /* Derived depth tokens */
   --color-sage-dim: #6A7A5A;
