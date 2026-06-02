@@ -4,6 +4,7 @@ import { Hero } from './components/sections/Hero'
 import { About } from './components/sections/About'
 import { Services } from './components/sections/Services'
 import { Products } from './components/sections/Products'
+import { Projects } from './components/sections/Projects'
 import { Trust } from './components/sections/Trust'
 import { Faq } from './components/sections/Faq'
 import { FinalCta } from './components/sections/FinalCta'
@@ -20,6 +21,7 @@ export default function App() {
         <About />
         <Services />
         <Products />
+        <Projects />
         <Trust />
         <Faq />
         <FinalCta />

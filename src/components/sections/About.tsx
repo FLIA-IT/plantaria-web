@@ -32,13 +32,18 @@ export function About() {
 
         {/* Text */}
         <div className="pt-0 md:pt-8">
-          <SectionHeading title={site.about.title} />
-          <p
-            className="font-sans leading-relaxed text-charcoal/75"
-            style={{ fontSize: 'var(--text-base)', maxWidth: '52ch' }}
-          >
-            {site.about.body}
-          </p>
+          <SectionHeading eyebrow={site.about.eyebrow} title={site.about.title} />
+          <div className="space-y-5" style={{ maxWidth: '52ch' }}>
+            {site.about.paragraphs.map((p, i) => (
+              <p
+                key={i}
+                className="font-sans leading-relaxed text-charcoal/75"
+                style={{ fontSize: 'var(--text-base)' }}
+              >
+                {p}
+              </p>
+            ))}
+          </div>
 
           {/* Botanical accent rule */}
           <div
