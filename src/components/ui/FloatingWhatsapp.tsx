@@ -21,10 +21,10 @@ export function FloatingWhatsapp({
         'fixed bottom-6 right-6 z-50',
         'inline-flex h-12 w-12 items-center justify-center',
         'rounded-full',
-        'bg-cream text-olive',
+        'bg-olive text-cream',
         'shadow-[0_10px_24px_-8px_rgba(0,0,0,0.4)]',
         'transition-all duration-300',
-        'hover:bg-cream-deep hover:text-olive-deep hover:-translate-y-0.5',
+        'hover:bg-olive-deep hover:text-cream-deep hover:-translate-y-0.5',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-olive',
       ].join(' ')}
     >
