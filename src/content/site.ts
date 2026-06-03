@@ -104,9 +104,9 @@ export const site = {
         image: '/producto.webp',
         imageAlt: 'Saco de Ecominerales en campo agrícola',
         paragraphs: [
-          'Los Ecominerales de D´naturals son una solución mineral orgánica de alto desempeño, desarrollada para fortalecer la salud del suelo y maximizar el potencial de los cultivos. Su fórmula, rica en 48% de silicio y compuesta por montmorillonita (45–55%), andesina (20–30%) y calcita (9–19%), mejora la estructura celular de las plantas, optimiza la absorción de nutrientes y aumenta la eficiencia en el uso del agua.',
-          'Gracias a su acción sobre las paredes celulares, los cultivos logran una mayor resistencia frente a enfermedades, plagas y condiciones de estrés, además de favorecer una fotosíntesis más eficiente y un desarrollo vegetal más vigoroso. Su tecnología mineral contribuye también a regenerar y equilibrar la salud del suelo, promoviendo una agricultura más sostenible y productiva.',
-          'Además, Ecominerales cuenta con certificaciones orgánicas internacionales como USDA Organic, JAS y Euro Hoja garantizando un producto seguro, confiable y alineado con los más altos estándares de agricultura orgánica.',
+          'Los Ecominerales de D´naturals son una solución mineral orgánica de alto desempeño, desarrollada para fortalecer la salud del suelo y maximizar el potencial de los cultivos. Su fórmula, rica en **48% de silicio** y compuesta por **montmorillonita (45–55%)**, **andesina (20–30%)** y **calcita (9–19%)**, mejora la estructura celular de las plantas, optimiza la absorción de nutrientes y aumenta la eficiencia en el uso del agua.',
+          'Gracias a su acción sobre las paredes celulares, los cultivos logran una **mayor resistencia** frente a enfermedades, plagas y condiciones de estrés, además de favorecer una **fotosíntesis más eficiente** y un **desarrollo vegetal más vigoroso**. Su tecnología mineral contribuye también a regenerar y equilibrar la salud del suelo, promoviendo una agricultura más sostenible y productiva.',
+          'Además, Ecominerales cuenta con **certificaciones orgánicas internacionales** como USDA Organic, JAS y Euro Hoja garantizando un producto seguro, confiable y alineado con los más altos estándares de agricultura orgánica.',
         ],
         certifications: ['USDA Organic', 'JAS', 'Euro Hoja'],
       },
