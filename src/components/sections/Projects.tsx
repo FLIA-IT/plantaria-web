@@ -1,4 +1,5 @@
 import { site } from '../../content/site'
+import { emphasize } from '../../lib/emphasize'
 import { SectionHeading } from '../ui/SectionHeading'
 
 export function Projects() {
@@ -32,7 +33,7 @@ export function Projects() {
                       className="font-sans leading-relaxed text-charcoal/75"
                       style={{ fontSize: 'var(--text-base)' }}
                     >
-                      {p}
+                      {emphasize(p)}
                     </p>
                   ))}
                 </div>

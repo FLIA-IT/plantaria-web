@@ -45,6 +45,8 @@ export const site = {
   about: {
     eyebrow: 'Consultora especializada en jardinería y manejo vegetal',
     title: 'Sobre mí',
+    image: '/sm.webp',
+    imageAlt: 'Retrato de la consultora de Plantaria',
     paragraphs: [
       'Soy una profesional especializada en jardinería, manejo de áreas verdes y sanidad vegetal, con experiencia asesorando a empresas, instituciones y clientes particulares en el desarrollo y cuidado de espacios verdes saludables y funcionales.',
       'Mi labor se centra en ofrecer soluciones técnicas integrales, prácticas y sostenibles para el diseño, establecimiento, mantenimiento y recuperación de jardines y áreas verdes. Asimismo, brindo orientación especializada en la selección y uso adecuado de productos para la nutrición, protección y fortalecimiento de las plantas.',
@@ -119,11 +121,11 @@ export const site = {
       {
         subtitle: 'Paisajismo y dirección agronómica',
         paragraphs: [
-          'El proyecto de paisajismo de La Gran Vía inició a mediados de 2024, comenzando desde el vivero de reproducción, donde el equipo técnico definió el diseño paisajístico y la selección de especies vegetales requeridas para el desarrollo del proyecto.',
-          'Como consultora en agronomía, tuve la responsabilidad de dirigir los procesos de reproducción, crecimiento y desarrollo de las diferentes especies destinadas al proyecto, asegurando que cada planta alcanzara las condiciones óptimas para su establecimiento en campo.',
-          'Para lograrlo, se desarrollaron planes de manejo específicos, programas fitosanitarios y estrategias nutricionales adaptadas a cada grupo de especies, incluyendo ornamentales de sombra, ornamentales de sol, pastos, especies frutales y árboles maderables. Cada plan fue diseñado de manera detallada para garantizar un crecimiento saludable, uniforme y dentro de los tiempos establecidos para la ejecución del proyecto.',
-          'El proceso representó un importante reto técnico y operativo, debido a la diversidad de especies y a las condiciones necesarias para su adecuado desarrollo. Sin embargo, fue una experiencia altamente satisfactoria al lograr culminar el proyecto con éxito.',
-          'En las fotografías puede observarse la evolución completa del proceso: desde la etapa inicial de producción en vivero hasta el resultado final ya establecido en el sitio del proyecto.',
+          'El proyecto de paisajismo de **La Gran Vía** inició a mediados de 2024, comenzando desde el **vivero de reproducción**, donde el equipo técnico definió el **diseño paisajístico** y la selección de especies vegetales requeridas para el desarrollo del proyecto.',
+          'Como **consultora en agronomía**, tuve la responsabilidad de dirigir los procesos de **reproducción, crecimiento y desarrollo** de las diferentes especies destinadas al proyecto, asegurando que cada planta alcanzara las condiciones óptimas para su establecimiento en campo.',
+          'Para lograrlo, se desarrollaron **planes de manejo específicos**, **programas fitosanitarios** y **estrategias nutricionales** adaptadas a cada grupo de especies, incluyendo ornamentales de sombra, ornamentales de sol, pastos, especies frutales y árboles maderables. Cada plan fue diseñado de manera detallada para garantizar un **crecimiento saludable, uniforme** y dentro de los tiempos establecidos para la ejecución del proyecto.',
+          'El proceso representó un importante **reto técnico y operativo**, debido a la diversidad de especies y a las condiciones necesarias para su adecuado desarrollo. Sin embargo, fue una experiencia **altamente satisfactoria** al lograr culminar el proyecto con éxito.',
+          'En las fotografías puede observarse la **evolución completa del proceso**: desde la **etapa inicial en vivero** hasta el **resultado final** ya establecido en el sitio del proyecto.',
         ],
         hero: {
           src: '/gv-final/gv-final1.webp',

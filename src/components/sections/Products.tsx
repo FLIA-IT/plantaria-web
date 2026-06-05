@@ -1,23 +1,6 @@
-import type { ReactNode } from 'react'
 import { site } from '../../content/site'
+import { emphasize } from '../../lib/emphasize'
 import { SectionHeading } from '../ui/SectionHeading'
-
-function emphasize(text: string): ReactNode {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g)
-  return parts.map((part, i) =>
-    part.startsWith('**') && part.endsWith('**') ? (
-      <strong
-        key={i}
-        className="bg-[var(--color-olive)] px-1.5 py-0.5 rounded-md box-decoration-clone"
-        style={{ color: 'white' }}
-      >
-        {part.slice(2, -2)}
-      </strong>
-    ) : (
-      part
-    ),
-  )
-}
 
 export function Products() {
   return (
@@ -40,12 +23,12 @@ export function Products() {
           {site.products.items.map((product) => (
             <article
               key={product.name}
-              className="grid gap-10 md:grid-cols-[5fr_7fr] md:items-start md:gap-16"
+              className="grid gap-10 md:grid-cols-[6fr_6fr] md:items-start md:gap-16"
             >
               {/* Visual */}
               <div className="md:sticky md:top-24">
                 <figure
-                  className="aspect-[4/5] w-full overflow-hidden rounded-3xl"
+                  className="aspect-square w-full overflow-hidden rounded-3xl"
                   style={{ background: 'var(--color-mauve-muted)' }}
                 >
                   {product.image ? (
@@ -53,10 +36,10 @@ export function Products() {
                       src={product.image}
                       alt={product.imageAlt ?? product.name}
                       width={1200}
-                      height={1260}
+                      height={1200}
                       loading="lazy"
                       decoding="async"
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain"
                     />
                   ) : (
                     <div
