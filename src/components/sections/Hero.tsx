@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[85svh] flex-col justify-end overflow-hidden bg-sage"
+      className="relative flex min-h-[85svh] items-center overflow-hidden bg-sage"
       style={{ paddingBlock: 'var(--space-section)' }}
     >
       {/* Atmospheric botanical layer — CSS-only, no lib */}
@@ -26,23 +26,8 @@ export function Hero() {
         style={{ background: 'var(--color-cream)' }}
       />
 
-      {/* Brand photo — fills the open right field, centred */}
-      <div
-        className="reveal pointer-events-none absolute right-[3%] top-1/2 hidden w-[clamp(24rem,38vw,38rem)] -translate-y-1/2 lg:block"
-        style={{ '--reveal-i': 1 } as React.CSSProperties}
-      >
-        <img
-          src="/hero-stand.jpg"
-          alt=""
-          aria-hidden="true"
-          loading="eager"
-          className="aspect-[4/3] w-full rounded-[1.75rem] object-cover object-center"
-          style={{ boxShadow: '0 30px 60px -24px rgba(0, 0, 0, 0.45)' }}
-        />
-      </div>
-
-      {/* Content — left-biased, not centred */}
-      <div className="relative mx-auto w-full max-w-6xl px-6">
+      {/* Content — text left, brand photo right (centred together on desktop) */}
+      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,clamp(24rem,36vw,36rem))]">
         <div className="max-w-2xl" style={{ '--reveal-i': 0 } as React.CSSProperties}>
           {site.hero.eyebrow && (
             <p
@@ -85,6 +70,21 @@ export function Hero() {
               {site.hero.cta}
             </WhatsappButton>
           </div>
+        </div>
+
+        {/* Brand photo — right column, centred with the text */}
+        <div
+          className="reveal hidden lg:block"
+          style={{ '--reveal-i': 1 } as React.CSSProperties}
+        >
+          <img
+            src="/hero-stand.jpg"
+            alt=""
+            aria-hidden="true"
+            loading="eager"
+            className="aspect-[4/3] w-full rounded-[1.75rem] object-cover object-center"
+            style={{ boxShadow: '0 30px 60px -24px rgba(0, 0, 0, 0.45)' }}
+          />
         </div>
 
         {/* Decorative vertical rule — botanical accent */}
