@@ -27,9 +27,14 @@ export function Navbar() {
           {/* Brand */}
           <a
             href="#top"
-            className="font-serif text-xl italic text-charcoal transition-colors duration-200 hover:text-sage focus-visible:outline-none focus-visible:underline"
+            aria-label="Plantaria — inicio"
+            className="inline-flex items-center rounded-full transition-opacity duration-200 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage"
           >
-            Plantaria
+            <img
+              src="/logo-plantaria.png"
+              alt="Plantaria"
+              className="h-12 w-auto"
+            />
           </a>
 
           {/* Desktop nav — edge-aligned minimal (N9) */}
