@@ -26,17 +26,17 @@ export function Hero() {
         style={{ background: 'var(--color-cream)' }}
       />
 
-      {/* Garden photo — fills the open right field */}
+      {/* Brand photo — fills the open right field, centred */}
       <div
-        className="reveal pointer-events-none absolute right-[4%] top-1/2 hidden w-[clamp(16rem,26vw,24rem)] -translate-y-1/2 lg:block"
+        className="reveal pointer-events-none absolute right-[4%] top-1/2 hidden w-[clamp(18rem,28vw,26rem)] -translate-y-1/2 lg:block"
         style={{ '--reveal-i': 1 } as React.CSSProperties}
       >
         <img
-          src="/gv-final/gv-final1.webp"
+          src="/hero-stand.jpg"
           alt=""
           aria-hidden="true"
           loading="eager"
-          className="aspect-[4/5] w-full rounded-[1.75rem] object-cover"
+          className="aspect-[4/3] w-full rounded-[1.75rem] object-cover object-center"
           style={{ boxShadow: '0 30px 60px -24px rgba(0, 0, 0, 0.45)' }}
         />
       </div>
