@@ -28,7 +28,7 @@ export function Hero() {
 
       {/* Brand photo — fills the open right field, centred */}
       <div
-        className="reveal pointer-events-none absolute right-[4%] top-1/2 hidden w-[clamp(18rem,28vw,26rem)] -translate-y-1/2 lg:block"
+        className="reveal pointer-events-none absolute right-[3%] top-1/2 hidden w-[clamp(24rem,38vw,38rem)] -translate-y-1/2 lg:block"
         style={{ '--reveal-i': 1 } as React.CSSProperties}
       >
         <img
