@@ -26,6 +26,14 @@ export function Hero() {
         style={{ background: 'var(--color-cream)' }}
       />
 
+      {/* Brand mark — fills the open right field */}
+      <img
+        src="/logo-plantaria.png"
+        alt="Plantaria — plantas, concreto, madera, artesanal"
+        className="reveal pointer-events-none absolute right-[4%] top-1/2 hidden w-[clamp(14rem,24vw,22rem)] -translate-y-1/2 opacity-95 lg:block"
+        style={{ '--reveal-i': 1 } as React.CSSProperties}
+      />
+
       {/* Content — left-biased, not centred */}
       <div className="relative mx-auto w-full max-w-6xl px-6">
         <div className="max-w-2xl" style={{ '--reveal-i': 0 } as React.CSSProperties}>

@@ -1,4 +1,4 @@
-import { INSTAGRAM_URL } from '../../lib/constants'
+import { INSTAGRAM_URL, PHONE_DISPLAY, PHONE_HREF } from '../../lib/constants'
 import { buildWhatsappUrl } from '../../lib/whatsapp'
 
 export function Footer() {
@@ -46,6 +46,13 @@ export function Footer() {
               style={{ fontSize: 'var(--text-sm)', minHeight: '44px', display: 'inline-flex', alignItems: 'center' }}
             >
               WhatsApp
+            </a>
+            <a
+              href={PHONE_HREF}
+              className="font-sans text-cream/60 underline-offset-4 transition-colors duration-200 hover:text-cream hover:underline focus-visible:outline-none focus-visible:underline"
+              style={{ fontSize: 'var(--text-sm)', minHeight: '44px', display: 'inline-flex', alignItems: 'center' }}
+            >
+              {PHONE_DISPLAY}
             </a>
           </nav>
         </div>
