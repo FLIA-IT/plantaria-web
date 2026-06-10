@@ -46,7 +46,7 @@ export function FinalCta() {
         </h2>
 
         <p
-          className="mt-5 font-sans leading-relaxed text-cream/70"
+          className="mt-5 font-sans leading-relaxed text-justify text-cream/70"
           style={{ fontSize: 'var(--text-base)', maxWidth: '44ch' }}
         >
           {site.finalCta.body}

@@ -13,7 +13,7 @@ export function Products() {
         <SectionHeading eyebrow={site.products.eyebrow} title={site.products.title} />
 
         <p
-          className="font-sans leading-relaxed text-charcoal/75"
+          className="font-sans leading-relaxed text-justify text-charcoal/75"
           style={{ fontSize: 'var(--text-base)', maxWidth: '60ch' }}
         >
           {site.products.intro}
@@ -81,7 +81,7 @@ export function Products() {
                   {product.paragraphs.map((p, i) => (
                     <p
                       key={i}
-                      className="font-sans leading-relaxed text-charcoal/75"
+                      className="font-sans leading-relaxed text-justify text-charcoal/75"
                       style={{ fontSize: 'var(--text-base)' }}
                     >
                       {emphasize(p)}

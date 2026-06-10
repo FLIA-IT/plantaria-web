@@ -30,7 +30,7 @@ export function Projects() {
                   {project.paragraphs.map((p, i) => (
                     <p
                       key={i}
-                      className="font-sans leading-relaxed text-charcoal/75"
+                      className="font-sans leading-relaxed text-justify text-charcoal/75"
                       style={{ fontSize: 'var(--text-base)' }}
                     >
                       {emphasize(p)}

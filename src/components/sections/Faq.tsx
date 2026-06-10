@@ -43,7 +43,7 @@ export function Faq() {
               </summary>
 
               <p
-                className="pb-6 pr-10 font-sans leading-relaxed text-charcoal/70"
+                className="pb-6 pr-10 font-sans leading-relaxed text-justify text-charcoal/70"
                 style={{ fontSize: 'var(--text-base)', maxWidth: '60ch' }}
               >
                 {item.answer}

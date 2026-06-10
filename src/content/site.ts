@@ -177,24 +177,24 @@ export const site = {
     eyebrow: 'Antes de escribirme',
     items: [
       {
-        question: '¿En qué zonas trabajás?',
-        answer: 'Ofrezco asesoría en Guatemala y El Salvador. La distribución de productos llega a ambos países; la visita presencial depende de la zona, y el resto lo resolvemos de forma remota.',
+        question: '¿En qué zonas brindas tus servicios?',
+        answer: 'Ofrezco asesoría especializada en Guatemala y El Salvador. La distribución de productos está disponible en ambos países. Las visitas presenciales se coordinan según la ubicación del proyecto, mientras que muchas consultas y seguimientos pueden realizarse de forma remota.',
       },
       {
-        question: '¿Cómo es una asesoría?',
-        answer: 'Empezamos con un diagnóstico de tu espacio y tus plantas. A partir de ahí armo un plan a medida: qué sembrar, cómo cuidarlo y qué productos te conviene usar.',
+        question: '¿Cómo funciona una asesoría?',
+        answer: 'Cada asesoría inicia con una evaluación de tu espacio, las condiciones del entorno y el estado de tus plantas. Con base en este diagnóstico, desarrollo un plan personalizado que incluye recomendaciones de especies, manejo, mantenimiento y los productos más adecuados para lograr los mejores resultados.',
       },
       {
-        question: '¿Atendés jardines pequeños o balcones?',
-        answer: 'Sí. Trabajo con jardines de todos los tamaños, macetas, terrazas y balcones. Cada espacio puede florecer con el cuidado correcto.',
+        question: '¿Atiendes jardines pequeños o balcones?',
+        answer: 'Sí. Trabajo con proyectos de todos los tamaños, desde jardines residenciales hasta terrazas, balcones y espacios con macetas. Cada área tiene el potencial de convertirse en un entorno verde y funcional con la planificación adecuada.',
       },
       {
-        question: '¿Qué productos distribuís?',
-        answer: 'Una selección curada para el cuidado del jardín. Te recomiendo solo lo que de verdad necesita tu espacio, según el plan que armamos juntos.',
+        question: '¿Qué productos distribuyes?',
+        answer: 'Distribuyo una selección de productos especializados para jardinería, paisajismo y cuidado vegetal. Mi enfoque es recomendar únicamente las soluciones que realmente necesita cada proyecto, garantizando un manejo eficiente y sostenible.',
       },
       {
-        question: '¿Cómo agendo?',
-        answer: 'Escribime por WhatsApp y me contás qué necesitás. Coordinamos desde ahí el primer paso.',
+        question: '¿Cómo puedo agendar una consulta?',
+        answer: 'Puedes comunicarte conmigo a través de WhatsApp y contarme brevemente sobre tu proyecto o necesidad. A partir de ahí coordinaremos la modalidad de atención y los siguientes pasos para comenzar.',
       },
     ] as FaqItem[],
   },

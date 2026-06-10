@@ -49,7 +49,7 @@ export function Hero() {
           </h1>
 
           <p
-            className="reveal mt-6 font-sans leading-relaxed text-cream/75"
+            className="reveal mt-6 font-sans leading-relaxed text-justify text-cream/75"
             style={{
               fontSize: 'var(--text-base)',
               maxWidth: '46ch',
